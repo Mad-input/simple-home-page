@@ -1,0 +1,76 @@
+---
+import Header from "../components/Header.astro";
+import Hero from "../components/Hero.astro";
+interface Props {
+  title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Astro description" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+  </head>
+  <body>
+    <Header />
+    <main>
+      <Hero />
+    </main>
+  </body>
+</html>
+<style is:global>
+  @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;700&display=swap");
+
+  html {
+    font-family: "Poppins", sans-serif;
+    color: #223344;
+    font-size: 16px;
+  }
+
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition:
+      color,
+      background 0.3s ease;
+  }
+
+  body {
+    padding: 0 6.25rem;
+    background: #f2f9fe;
+    height: 100vh;
+  }
+
+  body.dark {
+    background: #111729;
+  }
+
+  @media screen and (max-width: 1024px) {
+    html {
+      font-size: 15px;
+    }
+    body {
+      padding: 2.5rem;
+    }
+  }
+
+  @media screen and (max-width: 640px) {
+    html {
+      font-size: 13px;
+    }
+  }
+
+  @media screen and (max-width: 360px) {
+    html {
+      font-size: 9px;
+    }
+  }
+</style>

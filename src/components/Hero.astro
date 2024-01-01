@@ -1,0 +1,143 @@
+<section class="hero">
+  <div class="s-1">
+    <h3 class="subtitle">😎 Simple way to communicate</h3>
+    <h1 class="title">Actions for Accessibility in Design</h1>
+    <p class="info">
+      The fastest way to build and deploy websites with resusable components.
+    </p>
+    <div class="buttons-hero">
+      <button class="btn btn--1">Get Started</button>
+      <button class="btn">Get live demo</button>
+    </div>
+    <div class="condition">
+      <span class="c1"
+        ><img src="/Done.svg" alt="Done" />No credit card required</span
+      >
+      <span class="c1"
+        ><img src="/Done.svg" alt="Done" />No software to install</span
+      >
+    </div>
+  </div>
+  <div class="image-hero">
+    <img src="/hero-image.webp" alt="Simple Page" />
+  </div>
+</section>
+
+<style>
+  .hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 2.5rem;
+  }
+
+  .image-hero {
+    width: 50%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+  }
+
+  .image-hero img {
+    width: 100%;
+    vertical-align: top;
+  }
+
+  .subtitle {
+    font-size: 1rem;
+    font-weight: 500;
+    text-transform: uppercase;
+  }
+
+  .title {
+    font-size: 3.75rem;
+    margin: 1.25rem 0;
+    width: 55%;
+  }
+
+  .info {
+    font-size: 1.125rem;
+    font-weight: 500;
+    width: 80%;
+    color: rgba(34, 51, 68, 0.8);
+  }
+  body.dark .title {
+    color: #f2f9fe;
+  }
+
+  body.dark .subtitle {
+    color: #f2f9fe;
+  }
+  body.dark .info {
+    color: #909193;
+  }
+
+  .buttons-hero {
+    margin: 1.25rem 0;
+  }
+
+  .btn {
+    color: #2a4dd0;
+    border: none;
+    background: none;
+    font-weight: 600;
+    font-size: 1rem;
+    padding: 0.9375rem 2.1875rem;
+    margin: 1.25rem 0.625rem 1.25rem 0;
+    cursor: pointer;
+  }
+
+  .btn:nth-child(2) {
+    position: relative;
+  }
+
+  .btn:nth-child(2)::before {
+    position: absolute;
+    bottom: 30%;
+    content: "";
+    display: inline-block;
+    height: 0.125rem;
+    width: 62%;
+    background: #2a4dd0;
+    transition: 0.3s ease all;
+  }
+
+  .btn:nth-child(2):hover::before {
+    width: 0rem;
+  }
+
+  .btn.btn--1 {
+    text-decoration: none;
+    background: #2a4dd0;
+    color: #ffff;
+    border-radius: 0.9375rem;
+    text-transform: uppercase;
+  }
+
+  .condition .c1 {
+    display: inline-flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.3125rem;
+    font-size: 0.9375rem;
+    color: rgba(34, 51, 68, 0.8);
+  }
+  body.dark .condition .c1 {
+    color: #909193;
+  }
+
+  .condition .c1 img {
+    vertical-align: top;
+  }
+
+  @media screen and (max-width: 1024px) {
+    .hero {
+      flex-direction: column-reverse;
+      align-items: flex-start;
+    }
+
+    .image-hero {
+      width: 100%;
+    }
+  }
+</style>
